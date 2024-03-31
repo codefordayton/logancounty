@@ -1,99 +1,57 @@
 {
   "firstPageIsStarted": true,
-  "startSurveyText": "Begin Survey",
+  "startSurveyText": "Begin",
   "pages": [{
     "elements": [{
       "type": "html",
-      "html": "<h1>Need Repair?</h1>"
+      "html": "<p>Does your home need repaired, replaced, or demolished due to the March 2024 Tornados?</p>"
     }]
   },{
     "elements": [{
-      "name": "address",
-      "title": "What is your address?",
-      "type": "text"
-    },{
-      "name": "ownHome",
-      "title": "Do you own your own home?",
-      "type": "boolean"
-    },{
       "name": "homeType",
-      "title": "Is it a single, duplex, or other multi-unit?",
+      "title": "What is the type of home you live in?",
       "type": "radiogroup",
-      "choices": ["Single Family", "Duplex or other Multi-Unit"]
-    },{
-      "name": "otherProperties",
-      "title": "Do you own any other properties?",
-      "type": "boolean"
-    }
-    ],
-    "visibleIf": "{ownHome} = true"
-  },{
-    "elements": [{
-      "name": "nameOnLease",
-      "title": "Is your name on the deed?",
-      "type": "boolean"
-    }],
-    "visibleIf": "{ownHome} = true"
-  },{
-    "elements": [{
-      "name": "taxesUpToDate",
-      "title": "Are you up to date on your property taxes or on a payment plan?",
-      "type": "boolean"
-    }],
-    "visibleIf": "{ownHome} = true"
-  },{
-    "elements": [{
-      "name": "insurance",
-      "title": "Do you have home owner's insurance?",
-      "type": "boolean",
-      "visibleIf": "{ownHome} = true"
-    },{
-      "name": "weatherized",
-      "title": "Have you ever received weatherization or home repair assistance from any of these programs? County Corp, MVCAP, Rebuilding Together Dayton, or Habitat for Humanity?",
-      "type": "boolean",
-      "visibleIf": "{ownHome} = true"
-    },{
-      "name": "weatherized",
-      "title": "Has your home been weatherized by Miami Valley Community Action Partners program?",
-      "type": "boolean",
-      "visibleIf": "{ownHome} = false"
-    },{
-      "name": "centerpoint",
-      "title": "Do you have Centerpoint or Vectren as your natural gas provider?",
-      "type": "boolean"
+      "choices": [
+        {"value": 1, "text": "My home is located in a licensed manufactured home park"},
+        {"value": 2, "text": "My home is located in a licensed RV Park"},
+        {"value": 3, "text": "Other"}
+      ]
     }]
   },{
+    "visibleIf": "{homeType} = 3",
     "elements": [{
-      "name": "income",
-      "title": "What is your average household monthy income? (Please include all permanent residents over the age of 18)",
-      "type": "text"
-    },{
-      "name": "familyMembers",
-      "title": "How many people in the home?",
-      "type": "text"
-    },{
-      "name": "age",
-      "title": "How old are you?",
-      "type": "text"
-    }]
-  },{
-    "elements": [{
-      "name": "name",
-      "title": "What is your name?",
-      "type": "text"
-    },{
-      "name": "preferredContact",
-      "title": "What is your preferred form of contact?",
+      "name": "location",
+      "title": "Where is your home located?",
       "type": "radiogroup",
-      "choices": ["email", "call", "text"]
-    },{
-      "name": "email",
-      "title": "Email address",
-      "type": "text"
-    },{
-      "name": "phone",
-      "title": "Phone Number",
-      "type": "text"
+      "choices": [
+        {"value": 1, "text": "Stokes Township"},
+        {"value": 2, "text": "Washington Township"},
+        {"value": 3, "text": "Lakeview"},
+        {"value": 4, "text": "Russells Point"},
+        {"value": 5, "text": "Other/Don't Know"}
+      ]
     }]
+  }],
+  "completedHtmlOnCondition": [{
+    "expression": "{homeType} = 1",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact the Ohio Department of Commerce Division of Industrial Compliance at:<ul class='p-4 list-disc'><li>Phone: (614) 644-2223</li><li>Email: IC@com.state.oh.us</li></ul></li></ul>"
+  }, {
+    "expression": "{homeType} = 2",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact the Ohio Department of Health: 614-644-7455</li></ul>"
+  }, {
+    "expression": "{homeType} = 3 && {location} = 1",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact the Logan County Soil and Water Conservation District to Determine Floodplain info at:<ul class='p-4 list-disc'><li>Phone: 937-404-3147</li><li>Email: allison.fowler@oh.nacdnet.net</li></ul></li><li>Contact the Logan County Building Authority for any applicable building, gas, and electrical permits at:<ul><li>(937) 592-7473</li><li>Email: buildinginfo@logancountyohio.gov</li></ul></li><li>Contact the Logan County Plumbing Inspector for all plumbing permits at:<ul class='p-4 list-disc'><li>937-651-6195</li><li>cwren@loganhealthohio.gov</li></ul></li><li>Contact the Logan County Sewer District for any applicable sewer permits at: (937) 843-3328</li><li>Contact the Logan County Auditors Office before moving or placing any manufactured home to get all applicable permits at: 937-599-7209</li><li>Contact the Logan County Health District if you have a well to get a building site review and any applicable well (New, Altered, Abandoned) permits at:<ul class='p-4 list-disc'><li>937-651-6205</li><li>aharshfield@loganhealthohio.gov</li></ul></li></ul>"
+  }, {
+    "expression": "{homeType} = 3 && {location} = 2",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact the Logan County Soil and Water Conservation District to Determine Floodplain info at:<ul class='p-4 list-disc'><li>937-404-3147</li><li>allison.fowler@oh.nacdnet.net</li></ul></li><li>Contact the Logan County Building Authority for any applicable building, gas, and electrical permits at:<ul class='p-4 list-disc'><li>(937) 592-7473</li><li>buildinginfo@logancountyohio.gov</li></ul></li><li>Contact the Logan County Plumbing Inspector for all plumbing permits at:<ul class='p-4 list-disc'><li>937-651-6195</li><li>cwren@loganhealthohio.gov</li></ul></li><li>Contact the Logan County Sewer District for any applicable sewer permits at: (937) 843-3328</li><li>Contact the Logan County Auditors Office before moving or placing any manufactured home to get all applicable permits at: 937-599-7209</li><li>Contact the Logan County Health District if you have a well to get a building site review and any applicable well (New, Altered, Abandoned) permits at:<ul class='p-4 list-disc'><li>937-651-6205</li><li>aharshfield@loganhealthohio.gov</li></ul></li></ul>"
+  }, {
+    "expression": "{homeType} = 3 && {location} = 3",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact Village for floodplain info, demolition permits, and any applicable zoning permits at: 937-360-8412</li><li>Contact the Logan County Building Authority for any applicable building, gas, and electrical permits at:<ul class='p-4 list-disc'><li>(937) 592-7473</li><li>buildinginfo@logancountyohio.gov</li></ul></li><li>Contact the Logan County Plumbing Inspector for all plumbing permits at:<ul class='p-4 list-disc'><li>937-651-6195</li><li>cwren@loganhealthohio.gov</li></ul></li><li>Contact the Logan County Sewer District for any applicable sewer permits at: (937) 843-3328</li><li>Contact the Logan County Auditors Office before moving or placing any manufactured home to get all applicable permits at: 937-599-7209</li><li>Contact the Logan County Health District if you have a well to get a building site review and any applicable well (New, Altered, Abandoned) permits at:<ul class='p-4 list-disc'><li>937-651-6205</li><li>aharshfield@loganhealthohio.gov</li></ul></li></ul>"
+  }, {
+    "expression": "{homeType} = 3 && {location} = 4",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact village for floodplain info, demolition permits, and any applicable zoning permits at: 937-843-2245 ext. 4</li><li>Contact the Logan County Building Authority for any applicable building, gas, and electrical permits at:<ul class='p-4 list-disc'><li>(937) 592-7473</li><li>buildinginfo@logancountyohio.gov</li></ul></li><li>Contact the Logan County Plumbing Inspector for all plumbing permits at:<ul class='p-4 list-disc'><li>937-651-6195</li><li>cwren@loganhealthohio.gov</li></ul></li><li>Contact the Logan County Sewer District for any applicable sewer permits at: (937) 843-3328</li><li>Contact the Logan County Auditors Office before moving or placing any manufactured home to get all applicable permits at: 937-599-7209</li><li>Contact the Logan County Health District if you have a well to get a building site review and any applicable well (New, Altered, Abandoned) permits at:<ul class='p-4 list-disc'><li>937-651-6205</li><li>aharshfield@loganhealthohio.gov</li></ul></li></ul>"
+  }, {
+    "expression": "{homeType} = 3 && {location} = 5",
+    "html": "<ul class='p-4 list-disc text-left'><li>Report Damages to the <a href='https://www.co.logan.oh.us/201/Emergency-Management-Agency'>Logan County EMA</a>.</li><li>Contact the Logan County Building Authority for any applicable building, gas, and electrical permits at:<ul class='p-4 list-disc'><li>(937) 592-7473</li><li>buildinginfo@logancountyohio.gov</li></ul></li><li>Contact the Logan County Plumbing Inspector for all plumbing permits at:<ul class='p-4 list-disc'><li>937-651-6195</li><li>cwren@loganhealthohio.gov</li></ul></li><li>Contact the Logan County Sewer District for any applicable sewer permits at: (937) 843-3328</li><li>Contact the Logan County Auditors Office before moving or placing any manufactured home to get all applicable permits at: 937-599-7209</li><li>Contact the Logan County Health District if you have a well to get a building site review and any applicable well (New, Altered, Abandoned) permits at:<ul class='p-4 list-disc'><li>937-651-6205</li><li>aharshfield@loganhealthohio.gov</li></ul></li></ul>"
   }]
 }
