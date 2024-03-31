@@ -23,7 +23,7 @@ const _SurveyComp = ({ setIsCompleted }) => {
 const SurveyComp = React.memo(_SurveyComp);
 
 function NeedHelp() {
-  [isCompleted, setIsCompleted] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
 
   function refreshPage() {
     window.location.reload(false);
