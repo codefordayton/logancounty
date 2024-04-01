@@ -6,7 +6,7 @@ This is a site to support the Logan County EMA get information out about the Mar
 
 ## Installation
 
-This application is a small React application built with [Survey JS](https://surveyjs.io/). The application is built with npm and deployed automatically to Netlify, [here](https://astounding-moxie-dcf622.netlify.app/).
+This application is a small React application built with [Survey JS](https://surveyjs.io/). The application is built with npm and deployed automatically to Netlify, [here](https://logan.codefordayton.org/).
 
 You can get started by running:
 
