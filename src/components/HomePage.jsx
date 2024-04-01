@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <div>
       <Header />
-      <main className="p-6 flex flex-wrap justify-between">
+      <main className="p-6 mb-12">
         <section className="mb-12 w-full md:w-1/2 p-4">
           <Link
             to="/want-to-help"
@@ -42,6 +42,9 @@ function HomePage() {
           <ul className="list-disc list-inside">
             <li>
               <a href="https://loganco.nyc3.digitaloceanspaces.com/Ohio-Governor-DeWine-Presidential-Disaster-Declaration-Request-Letter-3-29-2024.pdf" target="_blank" download className="text-blue-500 hover:underline">Declaration of Emergency</a>
+            </li>
+            <li>
+              <a href="https://loganco.nyc3.digitaloceanspaces.com/Private%20Property%20Debris%20Removal%20-%20FEMA%20Guidance.pdf" target="_blank" download className="text-blue-500 hover:underline">Debris Removal Guidance</a>
             </li>
           </ul>
         </section>

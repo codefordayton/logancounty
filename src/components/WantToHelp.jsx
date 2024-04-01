@@ -7,7 +7,7 @@ function WantToHelp() {
         <div>
             <Header />
             <main className="p-6">
-                <p>Here you can provide more detailed information about how people can help with the recovery efforts, whether through physical volunteering, remote phone support, or financial support.</p>
+                <p>All volunteering is currently running through the United Way of Logan County. Find out how you can help <a href="https://www.uwlogan.org/indian-lake-tornado-community-response">HERE.</a></p>
             </main>
             <Footer />
         </div>
