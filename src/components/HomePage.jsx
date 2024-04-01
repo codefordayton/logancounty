@@ -41,7 +41,7 @@ function HomePage() {
           </p>
           <ul className="list-disc list-inside">
             <li>
-              <a href="/files/Ohio-Governor-DeWine-Presidential-Disaster-Declaration-Request-Letter-3-29-2024.pdf" target="_blank" download className="text-blue-500 hover:underline">Declaration of Emergency</a>
+              <a href="https://loganco.nyc3.digitaloceanspaces.com/Ohio-Governor-DeWine-Presidential-Disaster-Declaration-Request-Letter-3-29-2024.pdf" target="_blank" download className="text-blue-500 hover:underline">Declaration of Emergency</a>
             </li>
           </ul>
         </section>
