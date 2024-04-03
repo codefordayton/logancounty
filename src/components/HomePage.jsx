@@ -9,16 +9,14 @@ function HomePage() {
       <Header />
       <main className="p-6 mb-12">
         <section className="mb-12 w-full md:w-1/2 p-4">
-          <Link
-            to="/want-to-help"
+          <a href="https://www.uwlogan.org/indian-lake-tornado-community-response" _target="blank"
             className="block bg-white shadow-md rounded p-6 text-black no-underline"
           >
             <h2 className="text-2xl mb-4">Want to Help?</h2>
             <p>
-              Information about how you can provide physical volunteering,
-              remote phone support, or financial support.
+              Volunteers are needed to provide physical labor, remote phone support, and financial donations. Logan County United Way is coordinating these activities.
             </p>
-          </Link>
+          </a>
         </section>
 
         <section className="mb-12 w-full md:w-1/2 p-4">
