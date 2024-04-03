@@ -41,10 +41,13 @@ function HomePage() {
           </p>
           <ul className="list-disc list-inside">
             <li>
-              <a href="https://loganco.nyc3.digitaloceanspaces.com/Ohio-Governor-DeWine-Presidential-Disaster-Declaration-Request-Letter-3-29-2024.pdf" target="_blank" download className="text-blue-500 hover:underline">Declaration of Emergency</a>
+              <a href="https://loganco.nyc3.digitaloceanspaces.com/Ohio-Governor-DeWine-Presidential-Disaster-Declaration-Request-Letter-3-29-2024.pdf" target="_blank" download className="text-blue-500 underline">Declaration of Emergency</a>
             </li>
             <li>
-              <a href="https://loganco.nyc3.digitaloceanspaces.com/Private%20Property%20Debris%20Removal%20-%20FEMA%20Guidance.pdf" target="_blank" download className="text-blue-500 hover:underline">Debris Removal Guidance</a>
+              <a href="https://loganco.nyc3.digitaloceanspaces.com/Private%20Property%20Debris%20Removal%20-%20FEMA%20Guidance.pdf" target="_blank" download className="text-blue-500 underline">FEMA Debris Removal Guidance</a>
+            </li>
+            <li>
+              <a href="https://www.epa.gov/natural-disasters/dealing-debris-and-damaged-buildings" target="_blank" className="text-blue-500 underline">EPA Debris Removal Guidance</a>
             </li>
           </ul>
         </section>

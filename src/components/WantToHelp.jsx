@@ -7,7 +7,7 @@ function WantToHelp() {
         <div>
             <Header />
             <main className="p-6">
-                <p>All volunteering is currently running through the United Way of Logan County. Find out how you can help <a href="https://www.uwlogan.org/indian-lake-tornado-community-response">HERE.</a></p>
+                <p>All volunteering is currently running through the United Way of Logan County. Find out how you can help <a className="underline text-blue-500" href="https://www.uwlogan.org/indian-lake-tornado-community-response">HERE.</a></p>
             </main>
             <Footer />
         </div>
