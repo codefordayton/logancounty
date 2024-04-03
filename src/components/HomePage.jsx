@@ -9,7 +9,7 @@ function HomePage() {
       <Header />
       <main className="p-6 mb-12">
         <section className="mb-12 w-full md:w-1/2 p-4">
-          <a href="https://www.uwlogan.org/indian-lake-tornado-community-response" _target="blank"
+          <a href="https://www.uwlogan.org/indian-lake-tornado-community-response" target="_blank"
             className="block bg-white shadow-md rounded p-6 text-black no-underline"
           >
             <h2 className="text-2xl mb-4">Want to Help?</h2>
